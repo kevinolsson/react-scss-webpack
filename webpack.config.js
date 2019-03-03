@@ -34,5 +34,8 @@ module.exports = {
       appendScriptTag: true
     }),
     new Visualizer(),
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true,
+  }
 }
