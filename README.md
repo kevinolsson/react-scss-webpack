@@ -9,16 +9,10 @@ I'm pretty noob with webpack so there's a lot of things id like to build into th
 
 ## Setup
 1. Install dependencies:
-
-    ```npm install
-    ```
+  ``npm install``
 
 2. Run start script:
-
-    ```npm start
-    ```
+  ``npm start``
 
 3. When building a dist folder:
-  
-    ```npm run-script build
-    ``` 
+  ``npm run-script build``
