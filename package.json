@@ -1,10 +1,10 @@
 {
-  "name": "satb-react",
+  "name": "react-scss-webpack",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "keywords": [],
-  "author": "",
+  "author": "Kevin Olsson",
   "license": "ISC",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --host 127.0.0.1",
