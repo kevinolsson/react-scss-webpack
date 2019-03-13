@@ -4,6 +4,7 @@ const Visualizer = require('webpack-visualizer-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const globImporter = require('node-sass-glob-importer');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production'
 const path = require('path');
 
@@ -54,6 +55,9 @@ module.exports = {
         }
       },
     ]
+  },
+  optimization: {
+    minimizer: [new UglifyJsPlugin()],
   },
   plugins: [
     new MiniCssExtractPlugin(),
