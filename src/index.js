@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import './main.scss';
+import App from './components/App';
+import './styles/main.scss';
 
-render(<h1>Hello World!</h1>, document.querySelector('#app'));
+render(<App />, document.querySelector('#app'));

@@ -1,9 +1,15 @@
-
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var LiveReloadPlugin = require('webpack-livereload-plugin');
-var Visualizer = require('webpack-visualizer-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
+const Visualizer = require('webpack-visualizer-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require('path');
 
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'app.js',
+    path: path.resolve(__dirname, 'dist')
+  },
   module: {
     rules: [
       {
@@ -21,9 +27,28 @@ module.exports = {
           'sass-loader',
         ]
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: './images/[name]-[hash:8].[ext]'
+          }
+        }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: './fonts/[name].[ext]'
+          }
+        }
+      },
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html'
