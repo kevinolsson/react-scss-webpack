@@ -2,6 +2,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const globImporter = require('node-sass-glob-importer');
+const devMode = process.env.NODE_ENV !== 'production'
 const path = require('path');
 
 module.exports = {
@@ -22,10 +25,15 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
-        ]
+          {
+            loader: 'sass-loader',
+            options: {
+              importer: globImporter()
+            }
+          },
+        ],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -48,6 +56,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
