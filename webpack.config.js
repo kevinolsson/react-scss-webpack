@@ -24,6 +24,11 @@ module.exports = {
         }
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'eslint-loader']
+      },
+      {
         test: /\.scss$/,
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
