@@ -1,5 +1,5 @@
 # React + Scss + Webpack
-Nothing fancy. Just a starting point for myself when creating webapps with React and Scss. Contains the following:
+Nothing fancy. Just a starting point for myself when starting React projects. It has everything I personally like using. Contains the following:
 - React
 - Scss
   - Breakpoint slicer
