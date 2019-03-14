@@ -8,4 +8,15 @@ const App = () => (
   </React.Fragment>
 );
 
+// class App extends React.Component {
+//   render() {
+//     return(
+//       <React.Fragment>
+//         <h1>Hello World!</h1>
+//         <img src={sample} alt="" />
+//       </React.Fragment>
+//     );
+//   }
+// }
+
 export default App;

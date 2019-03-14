@@ -1,10 +1,10 @@
 # React + Scss + Webpack
 Nothing fancy. Just a starting point for myself when starting React projects. It has everything I personally like using. Contains the following:
 - React
-  - Linting (Airbnb react)
+  - ES lint
 - Scss
   - Breakpoint slicer
-  - Linting (hyphenatedbem) that play nice with Breakpoint slicer
+  - SASS lint (hyphenatedbem) that play nice with Breakpoint slicer
   - Scss globbing (import folder/*)
 - Livereload
 
