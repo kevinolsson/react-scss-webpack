@@ -2,8 +2,10 @@
 Nothing fancy. Just a starting point for myself when creating webapps with React and Scss. Contains the following:
 - React
 - Scss
+  - Breakpoint slicer
+  - Linting (hyphenatedbem) that play nice with Breakpoint slicer
+  - Scss globbing (import folder/*)
 - Livereload
-- Webpack Visualiser plugin
 
 I'm pretty noob with webpack so there's a lot of things id like to build into this over time as I get more comfortable with being a front-end dev (been working as a designer for the past few years).
 
